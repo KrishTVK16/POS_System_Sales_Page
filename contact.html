@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - OmniPOS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { outfit: ['Outfit', 'sans-serif'] } } } }
+  </script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-200">
+  <header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 h-20 flex items-center shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="flex items-center space-x-3 group shrink-0">
+          <div class="p-2 bg-indigo-600 rounded-xl group-hover:scale-105 transition-transform">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3v18h18V3M3 7h18M7 3v18"/>
+            </svg>
+          </div>
+          <span class="text-2xl font-bold font-outfit text-slate-900 dark:text-white tracking-tight">OmniPOS</span>
+        </a>
+        <nav class="hidden xl:flex items-center space-x-8 h-20">
+          <a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-7 text-sm transition-all">General POS</a>
+          <a href="home-rental.html" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-7 text-sm transition-all">Rental POS</a>
+          <a href="inventory.html" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-7 text-sm transition-all">Inventory</a>
+          <a href="services.html" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-7 text-sm transition-all">Services</a>
+          <a href="pricing.html" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-7 text-sm transition-all">Pricing</a>
+          <a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-7 text-sm transition-all">About</a>
+        </nav>
+        <div class="hidden lg:flex items-center space-x-4">
+          <button class="theme-toggle p-2.5 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
+            </svg>
+          </button>
+          <a href="login.html" class="px-5 py-2.5 text-slate-700 dark:text-slate-200 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Login</a>
+          <a href="signup.html" class="px-6 py-2.5 bg-indigo-600 text-white rounded-xl font-bold hover:bg-indigo-700 transition-all shadow-md shadow-indigo-200 dark:shadow-none">Sign Up</a>
+          <div class="w-px h-6 bg-slate-200 dark:bg-slate-700 mx-2"></div>
+          <a href="dashboard.html" class="px-5 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-bold hover:opacity-90 transition-all flex items-center space-x-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+            <span>Dashboard</span>
+          </a>
+        </div>
+        <div class="lg:hidden flex items-center space-x-3">
+          <button class="theme-toggle p-2 text-slate-500 rounded-lg">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
+            </svg>
+          </button>
+          <button id="mobile-menu-btn" class="p-2 text-slate-600 dark:text-slate-300">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="lg:hidden hidden fixed inset-0 top-20 bg-white dark:bg-slate-900 z-[60] overflow-y-auto px-6 py-8 animate-fade-in">
+      <div class="flex flex-col space-y-6">
+        <a href="index.html" class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">General POS</a>
+        <a href="home-rental.html" class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Rental POS</a>
+        <a href="inventory.html" class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Inventory</a>
+        <a href="services.html" class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Services</a>
+        <a href="pricing.html" class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Pricing</a>
+        <a href="about.html" class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">About</a>
+        <div class="h-px bg-slate-200 dark:bg-slate-800 w-full my-4"></div>
+        <a href="dashboard.html" class="w-full py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-center rounded-2xl font-bold text-xl flex items-center justify-center space-x-3">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+          </svg>
+          <span>Admin Dashboard</span>
+        </a>
+        <a href="signup.html" class="w-full py-5 bg-indigo-600 text-white text-center rounded-2xl font-bold text-xl">Sign Up Free</a>
+        <a href="login.html" class="w-full py-5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-center rounded-2xl font-bold text-xl">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-20 bg-slate-50 dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <h1 class="text-4xl font-bold font-outfit text-slate-900 dark:text-white mb-6">Let's talk business</h1>
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-12">
+            Have questions about our POS solutions? Our team is here to help you find the perfect setup for your shop.
+          </p>
+          <div class="space-y-8">
+            <div class="flex items-center space-x-6 p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
+              <div class="p-4 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 rounded-2xl">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Email Support</div>
+                <div class="text-lg font-bold text-slate-900 dark:text-white">hello@omnipos.io</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-6 p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
+              <div class="p-4 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 rounded-2xl">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Sales Inquiries</div>
+                <div class="text-lg font-bold text-slate-900 dark:text-white">+1 (800) 420-1337</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-6 p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
+              <div class="p-4 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 rounded-2xl">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Visit Office</div>
+                <div class="text-lg font-bold text-slate-900 dark:text-white">123 Tech Plaza, SF, CA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-slate-200 dark:border-slate-800 space-y-6">
+          <div class="grid grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-sm font-bold dark:text-white">First Name</label>
+              <input type="text" class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="John">
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-bold dark:text-white">Last Name</label>
+              <input type="text" class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="Doe">
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-bold dark:text-white">Email</label>
+            <input type="email" class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="john@company.com">
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-bold dark:text-white">Business Type</label>
+            <select class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 outline-none appearance-none">
+              <option>Retail Store</option>
+              <option>Restaurant/Cafe</option>
+              <option>Event Rental</option>
+              <option>Pharmacy</option>
+            </select>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-bold dark:text-white">Message</label>
+            <textarea rows="4" class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="Tell us how we can help..."></textarea>
+          </div>
+          <button type="submit" class="w-full py-4 bg-indigo-600 text-white rounded-2xl font-bold text-lg hover:bg-indigo-700 transition-all flex items-center justify-center space-x-2 shadow-lg shadow-indigo-100 dark:shadow-none">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+            <span>Send Message</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="space-y-6">
+          <a href="index.html" class="flex items-center space-x-2">
+            <div class="p-2 bg-indigo-600 rounded-lg">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3v18h18V3M3 7h18M7 3v18"/>
+              </svg>
+            </div>
+            <span class="text-xl font-bold font-outfit text-slate-900 dark:text-white">OmniPOS</span>
+          </a>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            Empowering local businesses with enterprise-grade sales and inventory tools. Seamless, fast, and secure.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Product</h4>
+          <ul class="space-y-4">
+            <li><a href="inventory.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Inventory Management</a></li>
+            <li><a href="demo-pos.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Point of Sale Demo</a></li>
+            <li><a href="pricing.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Pricing Plans</a></li>
+            <li><a href="home-rental.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Rental Solution</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Company</h4>
+          <ul class="space-y-4">
+            <li><a href="about.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">About Us</a></li>
+            <li><a href="contact.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Contact Support</a></li>
+            <li><a href="#" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Privacy Policy</a></li>
+            <li><a href="#" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Get In Touch</h4>
+          <ul class="space-y-4 text-slate-600 dark:text-slate-400">
+            <li>123 Commerce Way, Suite 400</li>
+            <li>San Francisco, CA 94103</li>
+            <li>+1 (555) 123-4567</li>
+            <li>support@omnipos.io</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <p class="text-slate-500 dark:text-slate-400 text-sm">
+          © 2026 OmniPOS Systems. Built with passion for business growth.
+        </p>
+        <button onclick="scrollToTop()" class="group flex items-center space-x-2 text-indigo-600 font-semibold">
+          <span>Back to top</span>
+          <div class="p-2 bg-indigo-50 dark:bg-indigo-900/30 rounded-full group-hover:-translate-y-1 transition-transform">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
