@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
-      }
+      },
+      base: '/POS_System_Sales_Page/',
     };
 });
