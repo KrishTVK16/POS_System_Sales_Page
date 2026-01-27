@@ -1,0 +1,7 @@
+{
+  "name": "OmniPOS",
+  "description": "A high-end POS SaaS sales platform with a live interactive demo, comprehensive admin dashboard, and multi-sector support.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
