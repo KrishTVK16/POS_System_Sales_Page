@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>POS Demo - OmniPOS</title>
@@ -10,30 +12,32 @@
     tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { outfit: ['Outfit', 'sans-serif'] } } } }
   </script>
 </head>
-<body class="flex flex-col h-screen bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-200">
-  <div class="h-20 flex items-center justify-between px-8 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm shrink-0">
+
+<body
+  class="flex flex-col h-screen bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-200">
+  <div
+    class="h-20 flex items-center justify-between px-8 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm shrink-0">
     <div class="flex items-center space-x-6">
       <a href="index.html" class="flex items-center space-x-3 group">
-        <div class="p-2 bg-indigo-600 rounded-xl">
-          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3v18h18V3M3 7h18M7 3v18"/>
-          </svg>
-        </div>
-        <span class="text-2xl font-bold font-outfit tracking-tight text-slate-900 dark:text-white">OmniPOS</span>
+        <img src="assets/images/logo.svg" alt="OmniPOS Logo" class="w-32 h-auto">
       </a>
       <div class="h-8 w-px bg-slate-200 dark:bg-slate-700"></div>
       <span class="text-slate-500 font-bold text-sm tracking-widest uppercase">POS Term-01</span>
     </div>
     <div class="flex items-center space-x-4">
-      <a href="dashboard.html" class="flex items-center space-x-2 px-4 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-bold text-sm hover:opacity-90">
+      <a href="dashboard.html"
+        class="flex items-center space-x-2 px-4 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-bold text-sm hover:opacity-90">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
         </svg>
         <span>Exit to Admin</span>
       </a>
-      <button class="theme-toggle p-2.5 bg-slate-50 dark:bg-slate-800 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700 transition-all border border-slate-100 dark:border-slate-700">
+      <button
+        class="theme-toggle p-2.5 bg-slate-50 dark:bg-slate-800 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700 transition-all border border-slate-100 dark:border-slate-700">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
         </svg>
       </button>
     </div>
@@ -42,28 +46,36 @@
   <div class="flex flex-1 overflow-hidden">
     <div class="flex-1 flex flex-col p-8 overflow-hidden bg-slate-50 dark:bg-slate-950">
       <div class="relative mb-8 max-w-2xl">
-        <svg class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        <svg class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 w-6 h-6" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
-        <input id="product-search" type="text" placeholder="Search products by name or SKU..." class="w-full pl-14 pr-6 py-5 bg-white dark:bg-slate-900 border-0 rounded-[2rem] shadow-xl shadow-slate-200/50 dark:shadow-none focus:ring-4 focus:ring-indigo-500/10 outline-none text-lg">
+        <input id="product-search" type="text" placeholder="Search products by name or SKU..."
+          class="w-full pl-14 pr-6 py-5 bg-white dark:bg-slate-900 border-0 rounded-[2rem] shadow-xl shadow-slate-200/50 dark:shadow-none focus:ring-4 focus:ring-indigo-500/10 outline-none text-lg">
       </div>
 
-      <div id="products-grid" class="flex-1 overflow-y-auto pr-2 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 scrollbar-hide">
+      <div id="products-grid"
+        class="flex-1 overflow-y-auto pr-2 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 scrollbar-hide">
         <!-- Products will be rendered here by JavaScript -->
       </div>
     </div>
 
-    <div class="w-[450px] flex flex-col bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 shadow-2xl z-20">
+    <div
+      class="w-[450px] flex flex-col bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 shadow-2xl z-20">
       <div class="p-8 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">
         <h2 class="text-2xl font-bold flex items-center dark:text-white font-outfit">
           <svg class="w-6 h-6 mr-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
           Order Details
         </h2>
-        <button onclick="clearCart()" class="p-3 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-950/20 rounded-2xl transition-all">
+        <button onclick="clearCart()"
+          class="p-3 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-950/20 rounded-2xl transition-all">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
           </svg>
         </button>
       </div>
@@ -86,7 +98,8 @@
             <span class="group-hover:text-indigo-600 transition-colors">Apply Discount</span>
             <div class="flex items-center space-x-2">
               <span class="text-indigo-600 font-bold">-$</span>
-              <input id="discount-input" type="number" value="0" class="w-20 text-right bg-transparent border-b-2 border-indigo-100 dark:border-indigo-900 focus:border-indigo-600 outline-none text-indigo-600 font-bold text-lg transition-all">
+              <input id="discount-input" type="number" value="0"
+                class="w-20 text-right bg-transparent border-b-2 border-indigo-100 dark:border-indigo-900 focus:border-indigo-600 outline-none text-indigo-600 font-bold text-lg transition-all">
             </div>
           </div>
         </div>
@@ -95,26 +108,36 @@
           <span id="total" class="text-4xl font-bold text-indigo-600">$0.00</span>
         </div>
         <div class="grid grid-cols-3 gap-3">
-          <button class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 border-2 border-transparent hover:border-indigo-600 rounded-[1.5rem] shadow-sm transition-all group">
-            <svg class="w-6 h-6 mb-2 text-slate-400 group-hover:text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
+          <button
+            class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 border-2 border-transparent hover:border-indigo-600 rounded-[1.5rem] shadow-sm transition-all group">
+            <svg class="w-6 h-6 mb-2 text-slate-400 group-hover:text-indigo-600" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
             <span class="text-xs font-bold dark:text-white">Cash</span>
           </button>
-          <button class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 border-2 border-transparent hover:border-indigo-600 rounded-[1.5rem] shadow-sm transition-all group">
-            <svg class="w-6 h-6 mb-2 text-slate-400 group-hover:text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+          <button
+            class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 border-2 border-transparent hover:border-indigo-600 rounded-[1.5rem] shadow-sm transition-all group">
+            <svg class="w-6 h-6 mb-2 text-slate-400 group-hover:text-indigo-600" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
             </svg>
             <span class="text-xs font-bold dark:text-white">Card</span>
           </button>
-          <button class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 border-2 border-transparent hover:border-indigo-600 rounded-[1.5rem] shadow-sm transition-all group">
-            <svg class="w-6 h-6 mb-2 text-slate-400 group-hover:text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
+          <button
+            class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 border-2 border-transparent hover:border-indigo-600 rounded-[1.5rem] shadow-sm transition-all group">
+            <svg class="w-6 h-6 mb-2 text-slate-400 group-hover:text-indigo-600" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
             <span class="text-xs font-bold dark:text-white">Wallet</span>
           </button>
         </div>
-        <button id="complete-payment" onclick="showReceipt()" disabled class="w-full py-5 bg-indigo-600 text-white rounded-2xl font-bold text-xl hover:bg-indigo-700 disabled:opacity-50 disabled:grayscale transition-all shadow-xl shadow-indigo-200 dark:shadow-none">
+        <button id="complete-payment" onclick="showReceipt()" disabled
+          class="w-full py-5 bg-indigo-600 text-white rounded-2xl font-bold text-xl hover:bg-indigo-700 disabled:opacity-50 disabled:grayscale transition-all shadow-xl shadow-indigo-200 dark:shadow-none">
           Complete Payment
         </button>
       </div>
@@ -122,18 +145,22 @@
   </div>
 
   <!-- Receipt Modal -->
-  <div id="receipt-modal" class="hidden fixed inset-0 z-[100] bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-6 animate-fade-in">
+  <div id="receipt-modal"
+    class="hidden fixed inset-0 z-[100] bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-6 animate-fade-in">
     <div class="bg-white w-full max-w-md rounded-[3rem] overflow-hidden animate-scale-up shadow-2xl">
       <div class="p-10 border-b border-slate-50 relative">
-        <button onclick="closeReceipt()" class="absolute top-6 right-6 p-3 hover:bg-slate-50 rounded-full transition-all">
+        <button onclick="closeReceipt()"
+          class="absolute top-6 right-6 p-3 hover:bg-slate-50 rounded-full transition-all">
           <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
         <div class="text-center">
-          <div class="w-20 h-20 bg-green-100 text-green-600 rounded-[2rem] flex items-center justify-center mx-auto mb-6 shadow-sm">
+          <div
+            class="w-20 h-20 bg-green-100 text-green-600 rounded-[2rem] flex items-center justify-center mx-auto mb-6 shadow-sm">
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
           <h3 class="text-3xl font-bold font-outfit text-slate-900">Payment Success</h3>
@@ -164,10 +191,14 @@
         </div>
       </div>
       <div class="p-10 bg-slate-50 flex gap-4">
-        <button onclick="closeReceipt()" class="flex-1 py-4 bg-white border-2 border-slate-200 rounded-2xl font-bold text-slate-700 hover:bg-slate-100 transition-all">New Order</button>
-        <button class="flex-1 py-4 bg-slate-900 text-white rounded-2xl font-bold flex items-center justify-center space-x-2 hover:opacity-90 transition-all">
+        <button onclick="closeReceipt()"
+          class="flex-1 py-4 bg-white border-2 border-slate-200 rounded-2xl font-bold text-slate-700 hover:bg-slate-100 transition-all">New
+          Order</button>
+        <button
+          class="flex-1 py-4 bg-slate-900 text-white rounded-2xl font-bold flex items-center justify-center space-x-2 hover:opacity-90 transition-all">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
           </svg>
           <span>Print Bill</span>
         </button>
@@ -178,4 +209,5 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/demo-pos.js"></script>
 </body>
+
 </html>
