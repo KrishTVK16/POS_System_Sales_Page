@@ -22,7 +22,7 @@
   </script>
 </head>
 
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-200">
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-200 font-outfit">
   <!-- Header -->
   <header
     class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 h-20 flex items-center shadow-sm">
@@ -128,249 +128,598 @@
           class="w-full py-5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-center rounded-2xl font-bold text-xl">Login</a>
       </div>
     </div>
+  </header>
 
-    <main class="bg-slate-50 dark:bg-slate-950 min-h-screen">
-      <section class="pt-24 pb-20 relative px-4">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div class="space-y-10">
-            <div
-              class="inline-flex items-center px-4 py-1.5 rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-400 text-sm font-bold shadow-sm">
-              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Event & Rental POS Focus
-            </div>
-            <h1
-              class="text-5xl md:text-7xl font-bold font-outfit text-slate-900 dark:text-white leading-[1.1] tracking-tighter">
-              Powerful POS for <br> <span class="text-indigo-600">Rental & Events</span>
-            </h1>
-            <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl">
-              Manage inventory availability, deposits, and bookings with a system built specifically for the rental
-              economy.
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="demo-pos.html"
-                class="px-10 py-5 bg-indigo-600 text-white rounded-2xl font-bold text-lg hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-200 dark:shadow-none">
-                Demo Checkout
-              </a>
-              <a href="index.html"
-                class="px-10 py-5 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border-2 border-slate-200 dark:border-slate-700 rounded-2xl font-bold text-lg hover:border-indigo-600 transition-all flex items-center">
-                Switch to General POS
-                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                </svg>
-              </a>
-            </div>
+  <main class="bg-slate-50 dark:bg-slate-950 min-h-screen overflow-x-hidden">
+    <section class="pt-24 pb-20 relative px-4">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-10">
+          <div
+            class="inline-flex items-center px-4 py-1.5 rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-400 text-sm font-bold shadow-sm">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Event & Rental POS Focus
           </div>
-          <div class="relative">
-            <img src="https://picsum.photos/seed/rental-pos/900/700" alt="Rental POS"
-              class="rounded-[3rem] shadow-2xl border-4 border-white dark:border-slate-800">
-            <div
-              class="absolute top-10 -left-12 p-8 bg-white dark:bg-slate-800 rounded-[2rem] shadow-2xl border border-slate-100 dark:border-slate-700 animate-pulse">
-              <div class="flex items-center space-x-4">
-                <div class="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center">
-                  <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="text-lg font-bold dark:text-white">Next Event</div>
-                  <div class="text-sm text-slate-500">In 2 hours, 15 items</div>
-                </div>
-              </div>
-            </div>
+          <h1
+            class="text-4xl xs:text-5xl md:text-7xl font-bold text-slate-900 dark:text-white leading-[1.1] tracking-tighter">
+            Powerful POS for <br> <span class="text-indigo-600">Rental & Events</span>
+          </h1>
+          <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl">
+            Manage inventory availability, deposits, and bookings with a system built specifically for the rental
+            economy.
+          </p>
+          <div class="flex flex-col sm:flex-row flex-wrap gap-4">
+            <a href="demo-pos.html"
+              class="px-6 py-4 sm:px-10 sm:py-5 bg-indigo-600 text-white rounded-2xl font-bold text-base sm:text-lg hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-200 dark:shadow-none text-center">
+              Demo Checkout
+            </a>
+            <a href="index.html"
+              class="px-6 py-4 sm:px-10 sm:py-5 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border-2 border-slate-200 dark:border-slate-700 rounded-2xl font-bold text-base sm:text-lg hover:border-indigo-600 transition-all flex items-center justify-center">
+              Switch to General POS
+              <svg class="ml-2 w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+              </svg>
+            </a>
           </div>
         </div>
-      </section>
-
-      <section class="py-24 bg-white dark:bg-slate-900">
-        <div class="max-w-7xl mx-auto px-4">
-          <div class="text-center mb-20">
-            <h2 class="text-4xl font-bold font-outfit text-slate-900 dark:text-white">Built for complex rental workflows
-            </h2>
-            <p class="text-slate-500 mt-4">Automate your event management from start to finish.</p>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div
-              class="p-10 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-transparent hover:border-indigo-200 dark:hover:border-indigo-900 transition-all hover:shadow-lg">
-              <div
-                class="w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
-                <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-bold dark:text-white mb-4">Availability Matrix</h3>
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">See real-time stock levels across any date
-                range.</p>
-            </div>
-            <div
-              class="p-10 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-transparent hover:border-indigo-200 dark:hover:border-indigo-900 transition-all hover:shadow-lg">
-              <div
-                class="w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
-                <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-bold dark:text-white mb-4">Deposit Tracking</h3>
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Hold and refund security deposits
-                automatically.</p>
-            </div>
-            <div
-              class="p-10 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-transparent hover:border-indigo-200 dark:hover:border-indigo-900 transition-all hover:shadow-lg">
-              <div
-                class="w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
-                <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="relative mt-12 lg:mt-0 px-4 sm:px-0">
+          <img src="https://picsum.photos/seed/rental-pos/900/700" alt="Rental POS"
+            class="rounded-[2.5rem] sm:rounded-[3rem] shadow-2xl border-4 border-white dark:border-slate-800 w-full h-auto">
+          <div
+            class="absolute top-1/2 -translate-y-1/2 -left-2 sm:-left-12 p-6 sm:p-8 bg-white dark:bg-slate-800 rounded-[1.5rem] sm:rounded-[2rem] shadow-2xl border border-slate-100 dark:border-slate-700 animate-pulse hidden xs:flex lg:flex">
+            <div class="flex items-center space-x-4">
+              <div class="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center">
+                <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold dark:text-white mb-4">Booking Calendar</h3>
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Drag-and-drop schedule for all your assets.
-              </p>
-            </div>
-            <div
-              class="p-10 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-transparent hover:border-indigo-200 dark:hover:border-indigo-900 transition-all hover:shadow-lg">
-              <div
-                class="w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
-                <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+              <div>
+                <div class="text-lg font-bold dark:text-white">Next Event</div>
+                <div class="text-sm text-slate-500">In 2 hours, 15 items</div>
               </div>
-              <h3 class="text-2xl font-bold dark:text-white mb-4">Late Return Alerts</h3>
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Automated SMS/Email reminders for late
-                items.</p>
-            </div>
-            <div
-              class="p-10 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-transparent hover:border-indigo-200 dark:hover:border-indigo-900 transition-all hover:shadow-lg">
-              <div
-                class="w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
-                <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-bold dark:text-white mb-4">Asset Maintenance</h3>
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Track repairs and cleaning cycles for gear.
-              </p>
-            </div>
-            <div
-              class="p-10 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-transparent hover:border-indigo-200 dark:hover:border-indigo-900 transition-all hover:shadow-lg">
-              <div
-                class="w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
-                <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-bold dark:text-white mb-4">Bulk Reservations</h3>
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Reserve multiple items for large scale
-                events.</p>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-      <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div class="space-y-6">
-            <a href="index.html" class="flex items-center space-x-2">
-              <img src="assets/images/logo.svg" alt="OmniPOS Logo" class="w-32 h-auto">
-            </a>
-            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-              Empowering local businesses with enterprise-grade sales and inventory tools. Seamless, fast, and secure.
-            </p>
-            <div class="flex space-x-4">
-              <a href="#"
-                class="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:text-indigo-600 transition-colors">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
-                </svg>
-              </a>
-              <a href="#"
-                class="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:text-indigo-600 transition-colors">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18 2h-3a5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                </svg>
-              </a>
-              <a href="#"
-                class="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:text-indigo-600 transition-colors">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
+    <section class="py-24 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">Built for complex
+            rental workflows
+          </h2>
+          <p class="text-slate-500 mt-4">Automate your event management from start to finish.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          <div
+            class="p-6 sm:p-10 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-transparent hover:border-indigo-200 dark:hover:border-indigo-900 transition-all hover:shadow-lg">
+            <div
+              class="w-12 h-12 sm:w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+              <svg class="w-6 h-6 sm:w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+              </svg>
             </div>
+            <h3 class="text-xl sm:text-2xl font-bold dark:text-white mb-4">Availability Matrix</h3>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">See real-time stock levels across
+              any date
+              range.</p>
           </div>
-
-          <div>
-            <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Product</h4>
-            <ul class="space-y-4">
-              <li><a href="inventory.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Inventory
-                  Management</a></li>
-              <li><a href="demo-pos.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Point of Sale
-                  Demo</a></li>
-              <li><a href="pricing.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Pricing
-                  Plans</a></li>
-              <li><a href="home-rental.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Rental
-                  Solution</a></li>
-              <li><a href="features.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Features</a>
-              </li>
-            </ul>
+          <div
+            class="p-6 sm:p-10 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-transparent hover:border-indigo-200 dark:hover:border-indigo-900 transition-all hover:shadow-lg">
+            <div
+              class="w-12 h-12 sm:w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+              <svg class="w-6 h-6 sm:w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold dark:text-white mb-4">Deposit Tracking</h3>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">Hold and refund security deposits
+              automatically.</p>
           </div>
-
-          <div>
-            <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Company</h4>
-            <ul class="space-y-4">
-              <li><a href="about.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">About Us</a>
-              </li>
-              <li><a href="contact.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Contact
-                  Support</a></li>
-              <li><a href="blog.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Blog</a></li>
-              <li><a href="#" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Privacy Policy</a></li>
-              <li><a href="#" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Terms of Service</a></li>
-            </ul>
+          <div
+            class="p-6 sm:p-10 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-transparent hover:border-indigo-200 dark:hover:border-indigo-900 transition-all hover:shadow-lg">
+            <div
+              class="w-12 h-12 sm:w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+              <svg class="w-6 h-6 sm:w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold dark:text-white mb-4">Booking Calendar</h3>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">Drag-and-drop schedule for all
+              your assets.
+            </p>
           </div>
+          <div
+            class="p-6 sm:p-10 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-transparent hover:border-indigo-200 dark:hover:border-indigo-900 transition-all hover:shadow-lg">
+            <div
+              class="w-12 h-12 sm:w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+              <svg class="w-6 h-6 sm:w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold dark:text-white mb-4">Late Return Alerts</h3>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">Automated SMS/Email reminders for
+              late
+              items.</p>
+          </div>
+          <div
+            class="p-6 sm:p-10 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-transparent hover:border-indigo-200 dark:hover:border-indigo-900 transition-all hover:shadow-lg">
+            <div
+              class="w-12 h-12 sm:w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+              <svg class="w-6 h-6 sm:w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold dark:text-white mb-4">Asset Maintenance</h3>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">Track repairs and cleaning cycles
+              for gear.
+            </p>
+          </div>
+          <div
+            class="p-6 sm:p-10 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-transparent hover:border-indigo-200 dark:hover:border-indigo-900 transition-all hover:shadow-lg">
+            <div
+              class="w-12 h-12 sm:w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+              <svg class="w-6 h-6 sm:w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+              </svg>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold dark:text-white mb-4">Bulk Reservations</h3>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">Reserve multiple items for large
+              scale
+              events.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div>
-            <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Get In Touch</h4>
-            <ul class="space-y-4 text-slate-600 dark:text-slate-400">
-              <li>123 Commerce Way, Suite 400</li>
-              <li>San Francisco, CA 94103</li>
-              <li>+1 (555) 123-4567</li>
-              <li>support@omnipos.io</li>
-            </ul>
+    <!-- 1. Live Availability Matrix -->
+    <section class="py-24 bg-slate-50 dark:bg-slate-950 overflow-x-hidden">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <div class="max-w-2xl">
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-4">Live Availability Matrix
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-lg">Never double-book again. See your entire fleet's
+              schedule at a glance with real-time status updates.</p>
+          </div>
+          <div class="flex space-x-3 pb-2">
+            <div
+              class="flex items-center space-x-2 px-3 py-1 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-600 dark:text-slate-400">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Available</span>
+            </div>
+            <div
+              class="flex items-center space-x-2 px-3 py-1 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-600 dark:text-slate-400">
+              <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+              <span>Rented</span>
+            </div>
+            <div
+              class="flex items-center space-x-2 px-3 py-1 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-600 dark:text-slate-400">
+              <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+              <span>Maintenance</span>
+            </div>
           </div>
         </div>
 
         <div
-          class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p class="text-slate-500 dark:text-slate-400 text-sm">
-            © 2026 OmniPOS Systems. Built with passion for business growth.
-          </p>
-          <button onclick="scrollToTop()" class="group flex items-center space-x-2 text-indigo-600 font-semibold">
-            <span>Back to top</span>
-            <div
-              class="p-2 bg-indigo-50 dark:bg-indigo-900/30 rounded-full group-hover:-translate-y-1 transition-transform">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-              </svg>
-            </div>
-          </button>
+          class="bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden p-8 sm:p-10">
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[800px]">
+              <thead>
+                <tr class="text-left border-b border-slate-100 dark:border-slate-800">
+                  <th class="pb-6 pr-8 font-bold text-slate-400 dark:text-slate-500 text-sm uppercase tracking-wider">
+                    Asset Name</th>
+                  <th class="pb-6 px-4 font-bold text-slate-400 dark:text-slate-500 text-sm uppercase tracking-wider">
+                    Mon</th>
+                  <th class="pb-6 px-4 font-bold text-slate-400 dark:text-slate-500 text-sm uppercase tracking-wider">
+                    Tue</th>
+                  <th class="pb-6 px-4 font-bold text-slate-400 dark:text-slate-500 text-sm uppercase tracking-wider">
+                    Wed</th>
+                  <th class="pb-6 px-4 font-bold text-slate-400 dark:text-slate-500 text-sm uppercase tracking-wider">
+                    Thu</th>
+                  <th class="pb-6 px-4 font-bold text-slate-400 dark:text-slate-500 text-sm uppercase tracking-wider">
+                    Fri</th>
+                  <th class="pb-6 px-4 font-bold text-slate-400 dark:text-slate-500 text-sm uppercase tracking-wider">
+                    Sat</th>
+                  <th
+                    class="pb-6 pl-4 font-bold text-slate-400 dark:text-slate-500 text-sm uppercase tracking-wider text-right">
+                    Action</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-50 dark:divide-slate-800/50">
+                <!-- Row 1 -->
+                <tr class="group hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                  <td class="py-6 pr-8">
+                    <div class="flex items-center space-x-4">
+                      <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="font-bold text-slate-900 dark:text-white">Professional AV Pack</div>
+                        <div class="text-xs text-slate-500">ID: AV-10029</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-6 px-4">
+                    <div class="h-8 rounded-lg bg-emerald-500/20 border-2 border-emerald-500/30 w-full"></div>
+                  </td>
+                  <td class="py-6 px-4">
+                    <div class="h-8 rounded-lg bg-emerald-500/20 border-2 border-emerald-500/30 w-full"></div>
+                  </td>
+                  <td class="py-6 px-4">
+                    <div class="h-8 rounded-lg bg-orange-500/20 border-2 border-orange-500/30 w-full"></div>
+                  </td>
+                  <td class="py-6 px-4">
+                    <div class="h-8 rounded-lg bg-orange-500/20 border-2 border-orange-500/30 w-full"></div>
+                  </td>
+                  <td class="py-6 px-4">
+                    <div class="h-8 rounded-lg bg-emerald-500/20 border-2 border-emerald-500/30 w-full"></div>
+                  </td>
+                  <td class="py-6 px-4">
+                    <div class="h-8 rounded-lg bg-blue-500/20 border-2 border-blue-500/30 w-full"></div>
+                  </td>
+                  <td class="py-6 pl-4 text-right">
+                    <button
+                      class="px-4 py-2 bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-indigo-600 hover:text-white transition-all">View</button>
+                  </td>
+                </tr>
+                <!-- Row 2 -->
+                <tr class="group hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                  <td class="py-6 pr-8">
+                    <div class="flex items-center space-x-4">
+                      <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="font-bold text-slate-900 dark:text-white">Outdoor Event Stage</div>
+                        <div class="text-xs text-slate-500">ID: ST-88210</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-6 px-4">
+                    <div class="h-8 rounded-lg bg-orange-500/20 border-2 border-orange-500/30 w-full"></div>
+                  </td>
+                  <td class="py-6 px-4">
+                    <div class="h-8 rounded-lg bg-orange-500/20 border-2 border-orange-500/30 w-full"></div>
+                  </td>
+                  <td class="py-6 px-4">
+                    <div class="h-8 rounded-lg bg-emerald-500/20 border-2 border-emerald-500/30 w-full"></div>
+                  </td>
+                  <td class="py-6 px-4">
+                    <div class="h-8 rounded-lg bg-emerald-500/20 border-2 border-emerald-500/30 w-full"></div>
+                  </td>
+                  <td class="py-6 px-4">
+                    <div class="h-8 rounded-lg bg-blue-500/20 border-2 border-blue-500/30 w-full"></div>
+                  </td>
+                  <td class="py-6 px-4">
+                    <div class="h-8 rounded-lg bg-blue-500/20 border-2 border-blue-500/30 w-full"></div>
+                  </td>
+                  <td class="py-6 pl-4 text-right">
+                    <button
+                      class="px-4 py-2 bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-indigo-600 hover:text-white transition-all">View</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="assets/js/main.js"></script>
+    <!-- 2. Smart Deposit & Protection -->
+    <section class="py-24 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div
+                class="p-8 rounded-[2rem] bg-indigo-600 text-white shadow-xl shadow-indigo-200 dark:shadow-none translate-y-6">
+                <svg class="w-10 h-10 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <h4 class="text-xl font-bold mb-2">Auto-Hold</h4>
+                <p class="text-indigo-100 text-sm">Freeze security deposits automatically upon checkout.</p>
+              </div>
+              <div
+                class="p-8 rounded-[2rem] bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm">
+                <svg class="w-10 h-10 text-indigo-600 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                </svg>
+                <h4 class="text-xl font-bold mb-2">One-Tap Refund</h4>
+                <p class="text-slate-500 text-sm">Release funds instantly after gear inspection.</p>
+              </div>
+              <div
+                class="p-8 rounded-[2rem] bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm">
+                <svg class="w-10 h-10 text-indigo-600 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <h4 class="text-xl font-bold mb-2">Damage Billing</h4>
+                <p class="text-slate-500 text-sm">Deduct repair costs directly from the held deposit.</p>
+              </div>
+              <div class="p-8 rounded-[2rem] bg-slate-900 dark:bg-slate-700 text-white shadow-xl -translate-y-6">
+                <svg class="w-10 h-10 text-indigo-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <h4 class="text-xl font-bold mb-2">Legal Ready</h4>
+                <p class="text-slate-400 text-sm">Generate signed damage waivers automatically.</p>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2 space-y-8">
+            <div
+              class="inline-flex items-center px-4 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-400 text-sm font-black uppercase tracking-widest">
+              OmniShield™ Security
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white tracking-tight leading-tight">Asset
+              protection <br> without the friction</h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+              Automate the entire security workflow. Our proprietary OmniShield bridge manages card authorization holds
+              so you can rent out high-value equipment with total peace of mind.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-center space-x-3">
+                <div
+                  class="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 flex items-center justify-center">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span class="font-bold text-slate-700 dark:text-slate-200">Zero transaction fees on held deposits</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <div
+                  class="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 flex items-center justify-center">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span class="font-bold text-slate-700 dark:text-slate-200">Integrated digital inspection
+                  checklists</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Rental Analytics & ROI -->
+    <section class="py-24 bg-slate-900 text-white overflow-hidden relative">
+      <!-- Background Decorations -->
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-600/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/10 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2">
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Turn Late Returns <br> into <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400">Revenue Stream</span>
+          </h2>
+          <p class="text-slate-400 text-lg">Stop losing money on idle gear. Track utilization rates and automate late
+            fee collection with zero awkward conversations.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Metric 1 -->
+          <div
+            class="p-8 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-sm group hover:bg-white/10 transition-all">
+            <div class="flex justify-between items-start mb-8">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <div class="text-right">
+                <div class="text-3xl font-bold">+24%</div>
+                <div class="text-xs text-emerald-400 font-bold uppercase tracking-widest">Revenue Lift</div>
+              </div>
+            </div>
+            <h4 class="text-xl font-bold mb-4">Utilization Optimization</h4>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">OmniPOS suggests dynamic pricing during peak rentals
+              periods to maximize asset ROI.</p>
+            <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+              <div class="h-full bg-indigo-500 w-[78%] group-hover:w-[85%] transition-all duration-1000"></div>
+            </div>
+            <div class="flex justify-between mt-2 text-[10px] font-black uppercase tracking-widest text-slate-500">
+              <span>Current Utilization</span>
+              <span>78%</span>
+            </div>
+          </div>
+
+          <!-- Metric 2 -->
+          <div
+            class="p-8 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-sm group hover:bg-white/10 transition-all">
+            <div class="flex justify-between items-start mb-8">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div class="text-right">
+                <div class="text-3xl font-bold">1.2hrs</div>
+                <div class="text-xs text-orange-400 font-bold uppercase tracking-widest">Avg. T-Turn</div>
+              </div>
+            </div>
+            <h4 class="text-xl font-bold mb-4">Maintenance Velocity</h4>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">Track the exact time gear spends in cleaning vs. out
+              on events to reduce inventory dead-time.</p>
+            <div class="flex gap-1 mt-4">
+              <div class="h-8 flex-1 bg-indigo-500/30 rounded-md"></div>
+              <div class="h-8 flex-1 bg-indigo-500/50 rounded-md"></div>
+              <div class="h-8 flex-1 bg-indigo-500 rounded-md"></div>
+              <div class="h-8 flex-1 bg-indigo-500/20 rounded-md"></div>
+              <div class="h-8 flex-1 bg-indigo-500/40 rounded-md"></div>
+            </div>
+          </div>
+
+          <!-- Metric 3 -->
+          <div
+            class="p-8 rounded-[2.5rem] bg-indigo-600 shadow-2xl shadow-indigo-500/20 group hover:bg-indigo-500 transition-all">
+            <div class="flex justify-between items-start mb-8">
+              <div class="w-12 h-12 rounded-2xl bg-white/20 text-white flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div class="text-right">
+                <div class="text-3xl font-bold">99.8%</div>
+                <div class="text-xs text-indigo-200 font-bold uppercase tracking-widest">CSAT Score</div>
+              </div>
+            </div>
+            <h4 class="text-xl font-bold mb-4">Customer Loyalty</h4>
+            <p class="text-indigo-100 text-sm leading-relaxed mb-8">Automated booking confirmation and status SMS keep
+              your clients informed and coming back.</p>
+            <a href="signup.html" class="inline-flex items-center space-x-2 text-white font-bold group-hover:underline">
+              <span>Explore Analytics</span>
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 0.5s ease-out forwards;
+    }
+  </style>
+
+  <!-- Footer -->
+  <footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="space-y-6">
+          <a href="index.html" class="flex items-center space-x-2">
+            <img src="assets/images/logo.svg" alt="OmniPOS Logo" class="w-32 h-auto">
+          </a>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            Empowering local businesses with enterprise-grade sales and inventory tools. Seamless, fast, and secure.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#"
+              class="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:text-indigo-600 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:text-indigo-600 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:text-indigo-600 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Product</h4>
+          <ul class="space-y-4">
+            <li><a href="inventory.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Inventory
+                Management</a></li>
+            <li><a href="demo-pos.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Point of Sale
+                Demo</a></li>
+            <li><a href="pricing.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Pricing
+                Plans</a></li>
+            <li><a href="home-rental.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Rental
+                Solution</a></li>
+            <li><a href="features.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Features</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Company</h4>
+          <ul class="space-y-4">
+            <li><a href="about.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">About Us</a>
+            </li>
+            <li><a href="contact.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Contact
+                Support</a></li>
+            <li><a href="blog.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Blog</a></li>
+            <li><a href="#" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Privacy Policy</a></li>
+            <li><a href="#" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Get In Touch</h4>
+          <ul class="space-y-4 text-slate-600 dark:text-slate-400">
+            <li>123 Commerce Way, Suite 400</li>
+            <li>San Francisco, CA 94103</li>
+            <li>+1 (555) 123-4567</li>
+            <li>support@omnipos.io</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <p class="text-slate-500 dark:text-slate-400 text-sm">
+          © 2026 OmniPOS Systems. Built with passion for business growth.
+        </p>
+        <button onclick="scrollToTop()" class="group flex items-center space-x-2 text-indigo-600 font-semibold">
+          <span>Back to top</span>
+          <div
+            class="p-2 bg-indigo-50 dark:bg-indigo-900/30 rounded-full group-hover:-translate-y-1 transition-transform">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

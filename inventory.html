@@ -13,10 +13,10 @@
   </script>
 </head>
 
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-200">
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-200 font-outfit">
   <!-- Header -->
   <header
-    class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 h-20 flex items-center shadow-sm">
+    class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 h-20 flex items-center shadow-sm w-full overflow-x-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div class="flex justify-between items-center">
         <a href="index.html" class="flex items-center space-x-3 group shrink-0">
@@ -81,285 +81,617 @@
         </div>
       </div>
     </div>
+  </header>
 
-    <!-- Mobile Nav -->
-    <div id="mobile-menu"
-      class="lg:hidden hidden fixed inset-0 top-20 bg-white dark:bg-slate-900 z-[60] overflow-y-auto px-6 py-8 animate-fade-in">
-      <div class="flex flex-col space-y-6">
-        <a href="index.html"
-          class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">General
-          POS</a>
-        <a href="home-rental.html"
-          class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Rental
-          POS</a>
-        <a href="inventory.html"
-          class="text-indigo-600 dark:text-indigo-400 text-2xl font-bold hover:text-indigo-600 transition-colors">Inventory</a>
-        <a href="services.html"
-          class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Services</a>
-        <a href="pricing.html"
-          class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Pricing</a>
-        <a href="about.html"
-          class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">About</a>
-        <a href="blog.html"
-          class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Blog</a>
-        <a href="features.html"
-          class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Features</a>
-        <div class="h-px bg-slate-200 dark:bg-slate-800 w-full my-4"></div>
-        <a href="dashboard.html"
-          class="w-full py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-center rounded-2xl font-bold text-xl flex items-center justify-center space-x-3">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-          </svg>
-          <span>Admin Dashboard</span>
-        </a>
-        <a href="signup.html"
-          class="w-full py-5 bg-indigo-600 text-white text-center rounded-2xl font-bold text-xl">Sign Up Free</a>
-        <a href="login.html"
-          class="w-full py-5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-center rounded-2xl font-bold text-xl">Login</a>
-      </div>
+  <!-- Mobile Nav -->
+  <div id="mobile-menu"
+    class="lg:hidden hidden fixed inset-0 top-20 bg-white dark:bg-slate-900 z-[60] overflow-y-auto px-6 py-8 animate-fade-in">
+    <div class="flex flex-col space-y-6">
+      <a href="index.html"
+        class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">General
+        POS</a>
+      <a href="home-rental.html"
+        class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Rental
+        POS</a>
+      <a href="inventory.html"
+        class="text-indigo-600 dark:text-indigo-400 text-2xl font-bold hover:text-indigo-600 transition-colors">Inventory</a>
+      <a href="services.html"
+        class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Services</a>
+      <a href="pricing.html"
+        class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Pricing</a>
+      <a href="about.html"
+        class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">About</a>
+      <a href="blog.html"
+        class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Blog</a>
+      <a href="features.html"
+        class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 transition-colors">Features</a>
+      <div class="h-px bg-slate-200 dark:bg-slate-800 w-full my-4"></div>
+      <a href="dashboard.html"
+        class="w-full py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-center rounded-2xl font-bold text-xl flex items-center justify-center space-x-3">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+        </svg>
+        <span>Admin Dashboard</span>
+      </a>
+      <a href="signup.html" class="w-full py-5 bg-indigo-600 text-white text-center rounded-2xl font-bold text-xl">Sign
+        Up Free</a>
+      <a href="login.html"
+        class="w-full py-5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-center rounded-2xl font-bold text-xl">Login</a>
     </div>
+  </div>
 
-    <main class="py-12 md:py-20 bg-slate-50 dark:bg-slate-950">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-          <div>
-            <h1 class="text-3xl font-bold font-outfit text-slate-900 dark:text-white">Inventory Management</h1>
-            <p class="text-slate-600 dark:text-slate-400">Real-time product status demo</p>
-          </div>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <div class="relative">
-              <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none"
-                stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              <input type="text" placeholder="Search products..."
-                class="pl-10 pr-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl w-full sm:w-64 focus:ring-2 focus:ring-indigo-500 outline-none">
-            </div>
-            <div class="flex bg-white dark:bg-slate-900 p-1 rounded-xl border border-slate-200 dark:border-slate-800">
-              <button
-                class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all bg-indigo-600 text-white">All</button>
-              <button
-                class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800">Retail</button>
-              <button
-                class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800">Events</button>
-              <button
-                class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800">Electronics</button>
-            </div>
-          </div>
+  <main class="py-12 md:py-20 bg-slate-50 dark:bg-slate-950 overflow-x-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+        <div>
+          <h1 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Inventory Management</h1>
+          <p class="text-slate-600 dark:text-slate-400">Real-time product status demo</p>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
-            <div class="h-48 relative overflow-hidden">
-              <img src="https://picsum.photos/seed/coffee/200/200" alt="Artisanal Coffee Beans"
-                class="w-full h-full object-cover">
-              <div
-                class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur text-indigo-600 rounded-full text-xs font-bold uppercase tracking-wider">
-                Retail
-              </div>
-            </div>
-            <div class="p-6">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Artisanal Coffee Beans</h3>
-                <span class="text-2xl font-bold text-indigo-600">$18.50</span>
-              </div>
-              <div class="flex items-center justify-between mb-6">
-                <div class="flex items-center space-x-2">
-                  <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span class="text-sm font-semibold text-green-600">In Stock</span>
-                </div>
-                <div class="text-slate-400 text-sm">Tax: 8%</div>
-              </div>
-              <div class="grid grid-cols-2 gap-3">
-                <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
-                  <div class="text-xs text-slate-500 mb-1">Stock Level</div>
-                  <div class="font-bold dark:text-white">45 units</div>
-                </div>
-                <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
-                  <div class="text-xs text-slate-500 mb-1">Status</div>
-                  <div class="font-bold dark:text-white">Sellable</div>
-                </div>
-              </div>
-            </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <div class="relative">
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input type="text" placeholder="Search products..."
+              class="pl-10 pr-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl w-full sm:w-64 focus:ring-2 focus:ring-indigo-500 outline-none">
           </div>
-          <div
-            class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
-            <div class="h-48 relative overflow-hidden">
-              <img src="https://picsum.photos/seed/tea/200/200" alt="Organic Green Tea"
-                class="w-full h-full object-cover">
-              <div
-                class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur text-indigo-600 rounded-full text-xs font-bold uppercase tracking-wider">
-                Retail
-              </div>
-            </div>
-            <div class="p-6">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Organic Green Tea</h3>
-                <span class="text-2xl font-bold text-indigo-600">$12.00</span>
-              </div>
-              <div class="flex items-center justify-between mb-6">
-                <div class="flex items-center space-x-2">
-                  <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                  <span class="text-sm font-semibold text-amber-500">Low Stock: 12</span>
-                </div>
-                <div class="text-slate-400 text-sm">Tax: 8%</div>
-              </div>
-              <div class="grid grid-cols-2 gap-3">
-                <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
-                  <div class="text-xs text-slate-500 mb-1">Stock Level</div>
-                  <div class="font-bold dark:text-white">12 units</div>
-                </div>
-                <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
-                  <div class="text-xs text-slate-500 mb-1">Status</div>
-                  <div class="font-bold dark:text-white">Sellable</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
-            <div class="h-48 relative overflow-hidden">
-              <img src="https://picsum.photos/seed/tripod/200/200" alt="Camera Tripod Rental"
-                class="w-full h-full object-cover">
-              <div
-                class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur text-indigo-600 rounded-full text-xs font-bold uppercase tracking-wider">
-                Events
-              </div>
-            </div>
-            <div class="p-6">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Camera Tripod Rental</h3>
-                <span class="text-2xl font-bold text-indigo-600">$25.00</span>
-              </div>
-              <div class="flex items-center justify-between mb-6">
-                <div class="flex items-center space-x-2">
-                  <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                  <span class="text-sm font-semibold text-amber-500">Low Stock: 5</span>
-                </div>
-                <div class="text-slate-400 text-sm">Tax: 10%</div>
-              </div>
-              <div class="grid grid-cols-2 gap-3">
-                <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
-                  <div class="text-xs text-slate-500 mb-1">Stock Level</div>
-                  <div class="font-bold dark:text-white">5 units</div>
-                </div>
-                <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
-                  <div class="text-xs text-slate-500 mb-1">Status</div>
-                  <div class="font-bold dark:text-white">Rental</div>
-                </div>
-              </div>
-            </div>
+          <div class="flex bg-white dark:bg-slate-900 p-1 rounded-xl border border-slate-200 dark:border-slate-800">
+            <button
+              class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all bg-indigo-600 text-white">All</button>
+            <button
+              class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800">Retail</button>
+            <button
+              class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800">Events</button>
+            <button
+              class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800">Electronics</button>
           </div>
         </div>
       </div>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-      <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div class="space-y-6">
-            <a href="index.html" class="flex items-center space-x-2">
-              <img src="assets/images/logo.svg" alt="OmniPOS Logo" class="w-32 h-auto">
-            </a>
-            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-              Empowering local businesses with enterprise-grade sales and inventory tools. Seamless, fast, and secure.
-            </p>
-            <div class="flex space-x-4">
-              <a href="#"
-                class="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:text-indigo-600 transition-colors">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
-                </svg>
-              </a>
-              <a href="#"
-                class="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:text-indigo-600 transition-colors">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                </svg>
-              </a>
-              <a href="#"
-                class="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:text-indigo-600 transition-colors">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
+      <!-- [NEW] Stock Intelligence Dashboard -->
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-12">
+        <div
+          class="lg:col-span-3 bg-white dark:bg-slate-900 rounded-[2rem] border border-slate-200 dark:border-slate-800 p-8 shadow-sm flex flex-col md:flex-row items-center gap-8 animate-fade-in">
+          <div class="flex-1 w-full">
+            <div class="flex justify-between items-end mb-4">
+              <div>
+                <h3 class="text-sm font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">Stock
+                  Health</h3>
+                <div class="text-3xl font-bold dark:text-white">90% Healthy</div>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-bold text-slate-500">128 Items Total</span>
+              </div>
+            </div>
+            <div class="h-4 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden flex">
+              <div class="h-full bg-indigo-600 w-[90%]"></div>
+              <div class="h-full bg-rose-500 w-[10%]"></div>
+            </div>
+            <div class="flex justify-between mt-3 text-xs font-bold">
+              <div class="flex items-center space-x-2 text-indigo-600">
+                <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+                <span>Healthy (115)</span>
+              </div>
+              <div class="flex items-center space-x-2 text-rose-500">
+                <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                <span>Critical (13)</span>
+              </div>
             </div>
           </div>
-
-          <div>
-            <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Product</h4>
-            <ul class="space-y-4">
-              <li><a href="inventory.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Inventory
-                  Management</a></li>
-              <li><a href="demo-pos.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Point of Sale
-                  Demo</a></li>
-              <li><a href="pricing.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Pricing
-                  Plans</a></li>
-              <li><a href="home-rental.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Rental
-                  Solution</a></li>
-              <li><a href="features.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Features</a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Company</h4>
-            <ul class="space-y-4">
-              <li><a href="about.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">About Us</a>
-              </li>
-              <li><a href="contact.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Contact
-                  Support</a></li>
-              <li><a href="blog.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Blog</a></li>
-              <li><a href="#" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Privacy Policy</a></li>
-              <li><a href="#" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Terms of Service</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Get In Touch</h4>
-            <ul class="space-y-4 text-slate-600 dark:text-slate-400">
-              <li>123 Commerce Way, Suite 400</li>
-              <li>San Francisco, CA 94103</li>
-              <li>+1 (555) 123-4567</li>
-              <li>support@omnipos.io</li>
-            </ul>
+          <div class="w-px h-20 bg-slate-100 dark:bg-slate-800 hidden md:block"></div>
+          <div class="flex-shrink-0 grid grid-cols-2 gap-6 w-full md:w-auto">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-indigo-600">$54.2k</div>
+              <div class="text-[10px] font-black uppercase tracking-widest text-slate-400">Inventory Value</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-rose-500">18</div>
+              <div class="text-[10px] font-black uppercase tracking-widest text-slate-400">Alerts</div>
+            </div>
           </div>
         </div>
 
         <div
-          class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p class="text-slate-500 dark:text-slate-400 text-sm">
-            © 2026 OmniPOS Systems. Built with passion for business growth.
-          </p>
-          <button onclick="scrollToTop()" class="group flex items-center space-x-2 text-indigo-600 font-semibold">
-            <span>Back to top</span>
-            <div
-              class="p-2 bg-indigo-50 dark:bg-indigo-900/30 rounded-full group-hover:-translate-y-1 transition-transform">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-              </svg>
-            </div>
-          </button>
+          class="bg-indigo-600 rounded-[2rem] p-8 text-white relative overflow-hidden group shadow-xl shadow-indigo-200 dark:shadow-none animate-fade-in"
+          style="animation-delay: 0.1s">
+          <div class="relative z-10">
+            <h3 class="font-bold text-lg mb-2">Smart Restock</h3>
+            <p class="text-indigo-100 text-xs mb-6">AI suggestions based on sales velocity.</p>
+            <button
+              class="w-full py-3 bg-white text-indigo-600 rounded-xl font-bold text-sm hover:bg-indigo-50 transition-all">Generate
+              PO</button>
+          </div>
+          <svg class="absolute -right-4 -bottom-4 w-32 h-32 text-white/10 group-hover:scale-110 transition-transform"
+            fill="currentColor" viewBox="0 0 24 24">
+            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
         </div>
       </div>
-    </footer>
 
-    <script src="assets/js/main.js"></script>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://picsum.photos/seed/coffee/200/200" alt="Artisanal Coffee Beans"
+              class="w-full h-full object-cover">
+            <div
+              class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur text-indigo-600 rounded-full text-xs font-bold uppercase tracking-wider">
+              Retail
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Artisanal Coffee Beans</h3>
+              <span class="text-2xl font-bold text-indigo-600">$18.50</span>
+            </div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-sm font-semibold text-green-600">In Stock</span>
+              </div>
+              <div class="text-slate-400 text-sm">Tax: 8%</div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
+                <div class="text-xs text-slate-500 mb-1">Stock Level</div>
+                <div class="font-bold dark:text-white">45 units</div>
+              </div>
+              <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
+                <div class="text-xs text-slate-500 mb-1">Status</div>
+                <div class="font-bold dark:text-white">Sellable</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://picsum.photos/seed/tea/200/200" alt="Organic Green Tea"
+              class="w-full h-full object-cover">
+            <div
+              class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur text-indigo-600 rounded-full text-xs font-bold uppercase tracking-wider">
+              Retail
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Organic Green Tea</h3>
+              <span class="text-2xl font-bold text-indigo-600">$12.00</span>
+            </div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span class="text-sm font-semibold text-amber-500">Low Stock: 12</span>
+              </div>
+              <div class="text-slate-400 text-sm">Tax: 8%</div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
+                <div class="text-xs text-slate-500 mb-1">Stock Level</div>
+                <div class="font-bold dark:text-white">12 units</div>
+              </div>
+              <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
+                <div class="text-xs text-slate-500 mb-1">Status</div>
+                <div class="font-bold dark:text-white">Sellable</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://picsum.photos/seed/tripod/200/200" alt="Camera Tripod Rental"
+              class="w-full h-full object-cover">
+            <div
+              class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur text-indigo-600 rounded-full text-xs font-bold uppercase tracking-wider">
+              Events
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Camera Tripod Rental</h3>
+              <span class="text-2xl font-bold text-indigo-600">$25.00</span>
+            </div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span class="text-sm font-semibold text-amber-500">Low Stock: 5</span>
+              </div>
+              <div class="text-slate-400 text-sm">Tax: 10%</div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
+                <div class="text-xs text-slate-500 mb-1">Stock Level</div>
+                <div class="font-bold dark:text-white">5 units</div>
+              </div>
+              <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
+                <div class="text-xs text-slate-500 mb-1">Status</div>
+                <div class="font-bold dark:text-white">Rental</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://picsum.photos/seed/tablet/200/200" alt="Smart Tablet POS"
+              class="w-full h-full object-cover">
+            <div
+              class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur text-indigo-600 rounded-full text-xs font-bold uppercase tracking-wider">
+              Electronics
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Smart Tablet POS</h3>
+              <span class="text-2xl font-bold text-indigo-600">$349.00</span>
+            </div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span class="text-sm font-semibold text-amber-500">Low Stock: 8</span>
+              </div>
+              <div class="text-slate-400 text-sm">Tax: 12%</div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
+                <div class="text-xs text-slate-500 mb-1">Stock Level</div>
+                <div class="font-bold dark:text-white">8 units</div>
+              </div>
+              <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
+                <div class="text-xs text-slate-500 mb-1">Status</div>
+                <div class="font-bold dark:text-white">Sellable</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://picsum.photos/seed/lights/200/200" alt="Event Lighting Kit"
+              class="w-full h-full object-cover">
+            <div
+              class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur text-indigo-600 rounded-full text-xs font-bold uppercase tracking-wider">
+              Events
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Event Lighting Kit</h3>
+              <span class="text-2xl font-bold text-indigo-600">$85.00</span>
+            </div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span class="text-sm font-semibold text-rose-500">Critical: 2</span>
+              </div>
+              <div class="text-slate-400 text-sm">Tax: 10%</div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
+                <div class="text-xs text-slate-500 mb-1">Stock Level</div>
+                <div class="font-bold dark:text-white">2 units</div>
+              </div>
+              <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
+                <div class="text-xs text-slate-500 mb-1">Status</div>
+                <div class="font-bold dark:text-white">Rental</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://picsum.photos/seed/grinder/200/200" alt="Premium Roast Grinder"
+              class="w-full h-full object-cover">
+            <div
+              class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur text-indigo-600 rounded-full text-xs font-bold uppercase tracking-wider">
+              Retail
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Premium Roast Grinder</h3>
+              <span class="text-2xl font-bold text-indigo-600">$120.00</span>
+            </div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-sm font-semibold text-green-600">In Stock</span>
+              </div>
+              <div class="text-slate-400 text-sm">Tax: 8%</div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
+                <div class="text-xs text-slate-500 mb-1">Stock Level</div>
+                <div class="font-bold dark:text-white">25 units</div>
+              </div>
+              <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl text-center">
+                <div class="text-xs text-slate-500 mb-1">Status</div>
+                <div class="font-bold dark:text-white">Sellable</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- [NEW] OmniSync™ Multi-Channel Showcase -->
+    <section
+      class="py-24 bg-white dark:bg-slate-900 mt-20 border-t border-slate-100 dark:border-slate-800 overflow-hidden relative">
+      <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <div
+            class="inline-flex items-center px-4 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-400 text-sm font-black uppercase tracking-widest mb-6">
+            Real-Time Connectivity</div>
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white tracking-tight mb-6">One Inventory.
+            <br> Every Channel.
+          </h2>
+          <p class="text-lg text-slate-600 dark:text-slate-400">OmniSync™ bridges the gap between your physical showroom
+            and digital storefronts, updating stock levels instantly as sales happen.</p>
+        </div>
+
+        <div class="relative">
+          <!-- Connection Lines (Visual Decor) -->
+          <div
+            class="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-700 to-transparent -translate-y-1/2 hidden lg:block">
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+            <!-- Channel 1 -->
+            <div
+              class="bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] p-10 border border-slate-100 dark:border-slate-700 text-center relative hover:shadow-xl transition-all group">
+              <div
+                class="w-20 h-20 bg-white dark:bg-slate-700 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-sm group-hover:scale-110 transition-transform">
+                <svg class="w-10 h-10 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold mb-4">Retail Store</h4>
+              <p class="text-slate-500 text-sm">Main POS Terminal</p>
+              <div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700">
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-[10px] font-black uppercase tracking-widest rounded-full">Connected</span>
+              </div>
+            </div>
+
+            <!-- Central Sync Node -->
+            <div class="flex items-center justify-center relative py-12 lg:py-0">
+              <div
+                class="w-24 h-24 bg-indigo-600 rounded-full flex items-center justify-center shadow-2xl shadow-indigo-300 dark:shadow-none relative z-20 animate-pulse">
+                <svg class="w-10 h-10 text-white animate-spin-slow" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+              </div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-48 h-48 bg-indigo-600/5 rounded-full animate-ping"></div>
+              </div>
+            </div>
+
+            <!-- Channel 2 -->
+            <div
+              class="bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] p-10 border border-slate-100 dark:border-slate-700 text-center relative hover:shadow-xl transition-all group">
+              <div
+                class="w-20 h-20 bg-white dark:bg-slate-700 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-sm group-hover:scale-110 transition-transform">
+                <svg class="w-10 h-10 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold mb-4">E-commerce</h4>
+              <p class="text-slate-500 text-sm">Synced Web Store</p>
+              <div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700">
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-[10px] font-black uppercase tracking-widest rounded-full">Connected</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      @keyframes spin-slow {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .animate-spin-slow {
+        animation: spin-slow 8s linear infinite;
+      }
+    </style>
+    <!-- [NEW] Smart Barcode & Mobile Scanner -->
+    <section class="py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="bg-slate-900 rounded-[3rem] overflow-hidden relative group">
+          <!-- Background Glow -->
+          <div
+            class="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-600/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2">
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center p-10 md:p-20 relative z-10">
+            <div class="space-y-10">
+              <div
+                class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-indigo-400 text-sm font-black uppercase tracking-widest">
+                Mobile Power</div>
+              <h2 class="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight">Your phone is now <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400 font-black">a
+                  professional scanner</span>
+              </h2>
+              <p class="text-xl text-slate-400 leading-relaxed">Skip the expensive hardware. OmniPOS turns any iOS or
+                Android device into a high-speed scanner for inventory audits, receiving, and price checks.</p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-10 h-10 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h2M4 8h2m12-4h2M4 4h2m4 4h2" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h5 class="text-white font-bold mb-1">Batch Scanning</h5>
+                    <p class="text-slate-500 text-sm">Process 50+ items in a single scan burst.</p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-10 h-10 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h5 class="text-white font-bold mb-1">Legacy Tags</h5>
+                    <p class="text-slate-500 text-sm">Compatible with all existing 1D/2D barcodes.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div
+                class="bg-white/5 backdrop-blur-md rounded-[3rem] border border-white/10 p-4 shadow-2xl relative overflow-hidden group">
+                <img src="https://picsum.photos/seed/mobile-scanner/600/800" alt="Mobile Scanner"
+                  class="rounded-[2.5rem] w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700">
+                <!-- Scanner Overlay Animation -->
+                <div
+                  class="absolute inset-x-0 h-1 bg-indigo-500/50 shadow-[0_0_20px_rgba(99,102,241,0.5)] top-0 group-hover:top-full transition-all duration-[3000ms] ease-linear">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="space-y-6">
+          <a href="index.html" class="flex items-center space-x-2">
+            <img src="assets/images/logo.svg" alt="OmniPOS Logo" class="w-32 h-auto">
+          </a>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            Empowering local businesses with enterprise-grade sales and inventory tools. Seamless, fast, and secure.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#"
+              class="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:text-indigo-600 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:text-indigo-600 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:text-indigo-600 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Product</h4>
+          <ul class="space-y-4">
+            <li><a href="inventory.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Inventory
+                Management</a></li>
+            <li><a href="demo-pos.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Point of Sale
+                Demo</a></li>
+            <li><a href="pricing.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Pricing
+                Plans</a></li>
+            <li><a href="home-rental.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Rental
+                Solution</a></li>
+            <li><a href="features.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Features</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Company</h4>
+          <ul class="space-y-4">
+            <li><a href="about.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">About Us</a>
+            </li>
+            <li><a href="contact.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Contact
+                Support</a></li>
+            <li><a href="blog.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Blog</a></li>
+            <li><a href="#" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Privacy Policy</a></li>
+            <li><a href="#" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-6">Get In Touch</h4>
+          <ul class="space-y-4 text-slate-600 dark:text-slate-400">
+            <li>123 Commerce Way, Suite 400</li>
+            <li>San Francisco, CA 94103</li>
+            <li>+1 (555) 123-4567</li>
+            <li>support@omnipos.io</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <p class="text-slate-500 dark:text-slate-400 text-sm">
+          © 2026 OmniPOS Systems. Built with passion for business growth.
+        </p>
+        <button onclick="scrollToTop()" class="group flex items-center space-x-2 text-indigo-600 font-semibold">
+          <span>Back to top</span>
+          <div
+            class="p-2 bg-indigo-50 dark:bg-indigo-900/30 rounded-full group-hover:-translate-y-1 transition-transform">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

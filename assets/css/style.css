@@ -73,3 +73,35 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Global Centering Rules */
+h1, h2, h3, h4, h5, h6 {
+  text-align: center !important;
+}
+
+p {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center flex and grid items content by default where it makes sense */
+/* Focusing on section containers and main content areas */
+section .flex, section .grid {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Ensure images and icons are centered if they are blocks */
+section img, section svg:not(nav svg) {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Specific overrides to keep navigation and footer structured but centered where appropriate */
+.max-w-7xl {
+  margin-left: auto;
+  margin-right: auto;
+}
