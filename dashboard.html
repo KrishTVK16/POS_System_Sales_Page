@@ -15,13 +15,23 @@
 
 <body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-200 font-outfit">
   <div class="flex min-h-screen">
+    <!-- Mobile Overlay -->
+    <div id="sidebar-overlay"
+      class="fixed inset-0 bg-slate-900/50 z-40 hidden md:hidden transition-opacity opacity-0 duration-300"></div>
+
     <!-- Sidebar -->
-    <aside
-      class="w-72 min-h-screen bg-white dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 transition-all duration-300 flex flex-col sticky top-0 z-40">
+    <aside id="sidebar"
+      class="w-72 min-h-screen bg-white dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 transition-transform duration-300 ease-in-out flex flex-col fixed inset-y-0 left-0 z-50 transform -translate-x-full md:relative md:translate-x-0">
       <div class="h-20 px-6 flex items-center justify-between border-b border-slate-100 dark:border-slate-900">
         <a href="index.html" class="flex items-center space-x-3 shrink-0">
           <img src="assets/images/logo.svg" alt="OmniPOS Logo" class="w-32 h-auto">
         </a>
+        <button id="sidebar-close"
+          class="md:hidden p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
       <nav class="flex-1 px-4 space-y-1 mt-6">
         <a href="dashboard.html"
@@ -107,9 +117,17 @@
     <div class="flex-1 p-4 md:p-8 overflow-x-hidden">
       <div class="space-y-8 animate-fade-in">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div>
-            <h1 class="text-3xl font-bold text-slate-900 dark:text-white">Good Morning, Alex</h1>
-            <p class="text-slate-500 dark:text-slate-400">Here's what's happening in your shop today.</p>
+          <div class="flex items-center gap-4">
+            <button id="sidebar-toggle"
+              class="md:hidden p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            <div>
+              <h1 class="text-3xl font-bold text-slate-900 dark:text-white">Good Morning, Alex</h1>
+              <p class="text-slate-500 dark:text-slate-400">Here's what's happening in your shop today.</p>
+            </div>
           </div>
           <div class="flex space-x-3">
             <button
@@ -207,7 +225,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div
             class="lg:col-span-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8">
-            <div class="flex justify-between items-center mb-8">
+            <div class="flex flex-col items-start gap-4 mb-8">
               <h3 class="text-lg font-bold dark:text-white">Revenue Performance</h3>
               <select
                 class="bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm font-semibold px-3 py-1 outline-none">

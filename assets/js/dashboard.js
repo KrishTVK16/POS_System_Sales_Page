@@ -11,7 +11,41 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'Sun', sales: 3490, revenue: 4300 },
   ];
   
-  // Simple chart rendering (can be enhanced with Chart.js if needed)
-  // For now, we'll use CSS-based visualization
+  // Sidebar Toggle Logic
+  const sidebar = document.getElementById('sidebar');
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+  const sidebarClose = document.getElementById('sidebar-close');
+  const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+  function openSidebar() {
+    sidebar.classList.remove('-translate-x-full');
+    sidebarOverlay.classList.remove('hidden');
+    // slight delay for opacity transition
+    setTimeout(() => {
+      sidebarOverlay.classList.remove('opacity-0');
+    }, 10);
+  }
+
+  function closeSidebar() {
+    sidebar.classList.add('-translate-x-full');
+    sidebarOverlay.classList.add('opacity-0');
+    // wait for opacity transition to finish
+    setTimeout(() => {
+      sidebarOverlay.classList.add('hidden');
+    }, 300);
+  }
+
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener('click', openSidebar);
+  }
+
+  if (sidebarClose) {
+    sidebarClose.addEventListener('click', closeSidebar);
+  }
+
+  if (sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', closeSidebar);
+  }
+
   console.log('Dashboard loaded');
 });
